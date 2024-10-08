@@ -1,0 +1,17 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "adhy",
+      "email": "adhy@test.com",
+      "phone": "081234567890",
+      "password": "@dhyt3st"
+    },
+    {
+      "id": "62f1",
+      "name": "adhy",
+      "email": "adhy@test.com",
+      "phone": "081234567890"
+    }
+  ]
+}

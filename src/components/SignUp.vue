@@ -1,26 +1,38 @@
 <template>
     <img class="logo" src="../assets/logo.png"/>
     <h1>Welcome to Gensentials</h1>
-    <h1>Don't have account?</h1>
-    <h1><a>Sign Up Here</a></h1>
+    <h1>Don't have an account?</h1>
     <div class="register">
         <input v-model="name" type="text" placeholder="Enter your first name" style="text-align: center"/>
-        <input v-model="email" type="text" placeholder="Enter your email" style="text-align: center"/>
+        <input v-model="email" type="email" placeholder="Enter your email" style="text-align: center"/>
         <input v-model="phone" type="text" placeholder="Enter your phone number" style="text-align: center"/>
-        <button><b>Sign Up</b></button>
-
+        <button @click="SignUp"><b>Sign Up</b></button>
     </div>
 </template>
-<script setup>
-import{ref} from "vue"
-const name=ref('')
+
+<script>
+export default {
+  name: 'SignUp',
+  data() {
+    return {
+      name: '',
+      email: '',
+      phone: ''
+    };
+  },
+  methods: {
+    SignUp() {
+      console.warn('SignUp', { name: this.name, email: this.email, phone: this.phone });
+    }
+  }
+};
 </script>
 
 <style>
-.logo{
-    width:400px
+.logo {
+    width: 400px;
 }
-.register input{
+.register input {
     width: 180px;
     height: 5px;
     padding: 15px;
@@ -38,8 +50,7 @@ const name=ref('')
     color: white;
     cursor: pointer;
 }
-.button{
+.button {
     text-align: center;
-    
 }
 </style>
